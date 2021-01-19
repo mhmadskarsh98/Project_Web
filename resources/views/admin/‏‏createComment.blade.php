@@ -9,7 +9,7 @@
                 <h2>
                   Create Comment
 
-                  <a href="/" class="btn btn-default pull-right"
+                  <a href="/admin/comments" class="btn btn-default pull-right"
                     >Go Back</a
                   >
                 </h2>
