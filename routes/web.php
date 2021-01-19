@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +11,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', 'HomeController@index');
+Route::get('post/{id}', 'HomeController@show');
+
+Route::resource('admin/posts', 'PostsController')->middleware('auth');
+
+Route::resource('admin/tags', 'TagsController')->middleware('auth');
+Route::resource('admin/users', 'UsersController')->middleware('auth');
+
+Route::resource('admin/categories', 'CategoryController')->middleware('auth');
+
+Route::resource('admin/comments', 'CommentController')->middleware('auth');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('lang/{local}', 'HomeController@lang');
