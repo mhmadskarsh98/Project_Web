@@ -46,6 +46,10 @@
                             </tbody>
                         </table>
 
+                        <div class="text-center">
+                            {{$category->render()}}
+                        </div>
+
 
 
                     </div>

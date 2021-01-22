@@ -24,7 +24,6 @@
                                     <th>Author</th>
                                     <th>Category</th>
                                     <th>Tags</th>
-                                    <th>Published</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -42,10 +41,7 @@
                                             <br>
                                         @endforeach
                                     </td>
-                                    <td>No</td>
                                     <td>
-                                        <a href="/posts/1/publish" data-method="PUT" data-token="32Mxrb2s2QPyv3C1h4iYcbfZBT7PmU7Tfm9koxkk"
-                                            data-confirm="Are you sure?" class="btn btn-xs btn-warning">Publish</a>
                                         <a href="/admin/posts/{{$item->id}}" class="btn btn-xs btn-success">Show</a>
                                         <a href="/admin/posts/{{$item->id}}/edit" class="btn btn-xs btn-info">Edit</a>
 

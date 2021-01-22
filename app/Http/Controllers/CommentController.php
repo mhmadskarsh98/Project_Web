@@ -20,7 +20,7 @@ class CommentController extends Controller
         if (Gate::denies('accessAdmin')) {
             return redirect('/home');
         }
-        return view('admin.comments',['comments' => Comment::get()] ); //'user' => Auth::get(['name','id']));
+        return view('admin.comments',['comments' => Comment:: paginate(5)] ); //'user' => Auth::get(['name','id']));
     }
 
     /**

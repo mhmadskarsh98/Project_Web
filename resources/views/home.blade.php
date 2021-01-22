@@ -21,7 +21,7 @@
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Post</label>
                   <select class="form-control" id="post_id"
-                  name="post_id[]">
+                  name="post_id">
                   @foreach ($posts as $item)
                   <option value="{{ $item->id }}"
                     @foreach ($comments as $comment)
@@ -46,16 +46,7 @@
 
     <div class="container">
 
-        <div class="row form-search">
-            <form method="GET" action="" accept-charset="UTF-8" role="form">
-                <div class="col-md-10">
-                    <input class="form-control" placeholder="Search..." name="search" type="text">
-                </div>
-                <div class="col-md-2">
-                    <input class="btn btn-block btn-default" type="submit" value="Sumbit">
-                </div>
-            </form>
-        </div>
+
 
         <div class="row">
             @guest

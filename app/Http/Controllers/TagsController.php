@@ -22,7 +22,7 @@ class TagsController extends Controller
         if (Gate::denies('accessAdmin')) {
             return redirect('/home');
         }
-        return view('admin.tags')->with('tags' , Tag::get());
+        return view('admin.tags')->with('tags' , Tag::paginate(5));
     }
 
     /**
